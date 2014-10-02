@@ -1,0 +1,15 @@
+<h1>Index: All the People</h1>
+
+<!-- Make a paragraph for each person -->
+
+<%@people.each do |person|%>
+	<li>
+		<strong><%=person.name%></strong> - <%=person.age%> - ID: <%= person.id%>
+		<a href="/people/<%=person.id%>">SHOW PAGE</a>
+		<%= link_to "Details", person_path(person) %> 
+	</li>
+<%end%>
+
+<a href="/people/new">Add New Person</a>
+<%= link_to "Make a New Person", new_person_path %> 
+

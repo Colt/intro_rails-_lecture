@@ -1,0 +1,9 @@
+<h1>Add a New Person</h1>
+
+<%= form_for @person do |f| %>
+	<%= f.text_field :name %>
+	<%= f.text_field :age %>
+	<%= f.text_field :town %>
+	<%= f.submit %>
+<% end %>
+
